@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Josefin+Sans&display=swap');
+.home_section {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(109.6deg, rgba(15, 2, 2, 1) 11.2%, rgba(36, 163, 190, 1) 91.1%);
+}
+
+.home-overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top right, rgba(15, 15, 15, 0.7) 10%, rgba(0, 0, 0, 0));
+	backdrop-filter: blur(3px);
+}
+
+.hero_heading{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 4rem;
+	margin: 4rem;
+	margin-top: 5%;
+}
+.hero_heading2{
+	font-style: italic;
+	margin: 5rem;
+}
+
+.btn-grad-home {
+	position: absolute;
+    margin-right: 7px;
+    padding: 7px 26px;
+	cursor: pointer;
+    text-align: center;
+    transition: .5s;
+    background-size: 200% auto;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+	z-index: 800;
+}
+.btn-1{
+	left: 10%;
+	animation: btnRotate 20s cubic-bezier(0,0,0,0) infinite;
+}
+.btn-2{
+	left: 20%;
+	animation: btnRotate 19s reverse cubic-bezier(0,0,0,0) infinite;
+}
+.btn-grad-home:hover {
+	animation: none;
+    box-shadow: 0 0 10px rgb(96, 236, 255);
+	background-size: 100%;
+}
+
+@keyframes btnRotate {
+	0%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: translate(10px, -10px) rotate(180deg);
+	}
+	100%{
+		transform: translate(0px, 0px) rotate(360deg);
+	}
+}
+
+.sign_btns{
+	width: 20vw;
+	height: 10vh;
+	overflow: hidden;
+	margin-left: 50%;
+}
+
+.custom-shape-divider-bottom-1672331299 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1672331299 svg {
+    position: relative;
+    display: block;
+    width: calc(178% + 1.3px);
+    height: 232px;
+}
+
+.custom-shape-divider-bottom-1672331299 .shape-fill {
+    fill: #00ecb1;
+}

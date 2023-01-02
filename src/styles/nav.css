@@ -1,0 +1,104 @@
+/* NAVBAR CSS here */
+a {
+	text-decoration: none;
+}
+
+iframe{
+	pointer-events: none;
+}
+
+.navbar {
+    position: fixed;
+	width: 50vw;
+	height: 10vh;
+	max-width: 75vw;
+	max-height: 15vh;
+	margin: auto;
+	background: rgb(0, 0, 0, .4);
+	backdrop-filter: blur(10px);
+	padding: 1rem;
+	border-radius: 5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: all 500ms ease-in-out;
+	z-index: 800;
+}
+
+.nav_pos80{
+    top: 80vh;
+}
+.nav_pos84{
+    top: 84vh;
+}
+.nav_pos7{
+    top: 7vh;
+}
+
+.nav_list {
+	padding-right: 2.5rem;
+	width: 100%;
+	height: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo{
+	width: 1rem;
+	height: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo:hover{
+	box-shadow: rgba(0, 255, 234) 0px 2px 30px 7px;
+}
+
+.logo img{
+	cursor: pointer;
+	width: 2.5rem;
+	align-self: center;
+}
+
+.nav_list .list_item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.list_item .bx {
+	font-size: 1.5rem;
+	color: #cbced1;
+	transition: color 250ms ease-in-out;
+}
+
+.list_item:hover .bx,
+.list_item:focus .bx {
+	color: #fff;
+	text-shadow: 3px 3px 20px #00fff2
+}
+
+.list_item .current {
+	color: #0066cc;
+}
+
+.list_item span {
+	font-size: .7rem;
+	color: #b3b4b6;
+	transition: opacity 300ms ease-in-out;
+}
+
+.list_item:hover span,
+.list_item:focus span {
+	color: #fff;
+	text-shadow: 3px 3px 20px #00fff2
+}
+
+.nav_active{
+	color: #fff;
+	text-shadow: 3px 3px 20px #00fff2
+}

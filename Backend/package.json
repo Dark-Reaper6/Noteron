@@ -1,0 +1,20 @@
+{
+  "name": "mynotebook",
+  "version": "1.0.0",
+  "description": "My Notebook - Have a notebook on the cloud and access it from everywhere",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dark Reaper",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.3"
+  }
+}

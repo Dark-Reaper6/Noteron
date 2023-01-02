@@ -1,0 +1,311 @@
+.notes-body {
+    background-image: linear-gradient( 110.1deg,  rgba(30,2,83,1) 44.2%, rgb(9, 222, 250) 138.2% );
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,52,89,1) 0%, rgba(0,168,232,1) 90% ); */
+    background-attachment: fixed;
+}
+
+.welcome_heading {
+    top: 22%;
+    font-style: italic;
+}
+
+.tag {
+    position: absolute;
+    right: 3rem;
+    top: 7%;
+    background: rgba(0, 0, 0, 0.1);
+    padding: .5rem;
+    border-radius: 1rem;
+    font-size: small;
+    color: #fff;
+}
+.tag input {
+    border: none;
+    background: transparent !important;
+    outline: none;
+    outline-offset: none;
+    z-index: 10;
+}
+
+.title {
+    width: 75%;
+}
+
+.input-field {
+    color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: none;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: .5s;
+
+}
+
+.input-field:focus {
+    border-radius: 1rem;
+    padding: 1rem;
+    border: none;
+    backdrop-filter: blur(100px);
+    background: rgba(255, 255, 255, 0.07);
+    outline: none;
+    border-bottom: 1px solid #fff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.desc {
+    width: 90%;
+}
+
+.no-notes {
+    height: 80vh;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* gredient buttons CSS here */
+.btn-grad {
+    margin-right: 7px;
+    padding: 7px 26px;
+    text-align: center;
+    transition: .5s;
+    background-size: 200% auto;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+}
+
+.btn-grad:hover {
+    box-shadow: 0 0 10px rgb(96, 236, 255);
+    background-size: 100% auto;
+}
+
+/* Modal CSS from here */
+.modal-window {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    transition: all 0.3s;
+}
+
+.hide-it {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-window>div {
+    position: absolute;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    /* background-image: radial-gradient(circle farthest-corner at 32.7% 82.7%, rgba(173, 0, 171, 1) 8.3%, rgba(15, 51, 92, 1) 79.4%); */
+    background-image: linear-gradient( 68.4deg,  rgb(0, 20, 196) -0.4%, rgba(5,222,250,1) 100.2% );
+}
+
+.update-modal-size {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 75vw;
+    height: 75vh;
+}
+.delete-modal-size {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 30vw;
+    height: 20vh;
+
+}
+
+.modal-window header {
+    font-weight: bold;
+}
+
+.modal-window h1 {
+    font-size: 150%;
+    margin: 0 0 15px;
+}
+
+.modal-close {
+    color: #fff;
+    background: transparent;
+    border: none;
+    line-height: 50px;
+    font-size: 2.5rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 100px;
+    text-decoration: none;
+    transition: all .5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.modal-close:hover {
+    transform: rotate(270deg);
+    color: #89fffd;
+}
+
+/* Toolpit CSS here */
+
+.link {
+    position: relative;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+}
+
+.link:before {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    left: 37%;
+    top: 40%;
+    transform: translate3d(-50%, 0%, 0);
+    transition: all 0.3s ease;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    z-index: 3;
+    border-color: rgb(187, 40, 40) transparent transparent transparent;
+}
+
+.link:after {
+    content: attr(data-tooltip);
+    font-size: 14px;
+    position: absolute;
+    color: #fff;
+    background: rgb(187, 40, 40);
+    padding: 8px 12px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 200px;
+    opacity: 0;
+    pointer-events: none;
+    left: 37%;
+    top: 30%;
+    border-radius: 4px;
+    transform: translate3d(-50%, 0%, 0);
+    transition: all 0.3s ease;
+}
+
+.link:before,
+.link:after {
+    opacity: 1;
+}
+
+.link:before {
+    transform: translate3d(-50%, calc(-100% - 18px), 0);
+}
+
+.link:after {
+    transform: translate3d(-50%, calc(-100% - 16px), 0);
+}
+
+/* Cards CSS here */
+
+.card {
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    min-height: 200px;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+}
+
+.card-5 {
+    background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0, 29, 49, 0.4) 0%, rgba(2, 121, 168, 0.4) 90% );
+    backdrop-filter: blur(50px);
+}
+
+.card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+}
+
+.card__desc,
+.card__remove,
+.card__edit,
+.card__tag {
+    /* position: relative; */
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.card__desc::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.5s;
+}
+
+.card:hover .card__desc::after {
+    width: 100%;
+}
+
+.card__edit {
+    position: absolute;
+    bottom: 1rem;
+    right: 4rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.card__remove {
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.card__remove:hover {
+    transform: translateY(-5px);
+}
+
+.card__edit:hover {
+    transform: translateY(-5px);
+}
+
+.card__tag {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.card__title {
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.card__desc {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1600px) {
+    .cards {
+        justify-content: center;
+    }
+}
